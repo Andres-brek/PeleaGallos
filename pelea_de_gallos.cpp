@@ -156,21 +156,80 @@ class Gallos{
     };
 int main(){
 	Gallo Gallito;
-    Gallos Gallod;
-    Gallito.Nombre="Andres";
-    Gallito.Altura=15;
-    Gallito.Derrotas=2;
-    Gallito.Edad=5;
-    Gallito.Peso=5;
-    Gallito.Raza="Chandita";
-    Gallito.Victorias=1;
-    Gallod.Agregar_inicio(Gallito);
-    Gallod.mostrar();
-    Gallod.Buscar("Andres");
-    Gallod.eliminarx("Andres");
-    Gallod.mostrar();
-    
-    
-	return 1;
-    
+	Gallos Gallod;
+	Gallito.Nombre="Andres";
+	Gallito.Altura=15;
+	Gallito.Derrotas=2;
+	Gallito.Edad=5;
+	Gallito.Peso=5;
+	Gallito.Raza="Chandita";
+	Gallito.Victorias=1;
+	Gallod.Agregar_inicio(Gallito);
+	Gallod.mostrar();
+	Gallod.Buscar("Andres");
+	Gallod.eliminarx("Andres");
+	Gallod.mostrar();
+	int opc=0;
+    	int c=1;
+    	while (c==1){
+		cout<<"====================\n";
+		cout<<"===Menu Principal===\n";
+		cout<<"====================\n";
+		cout<<"1. Agregar gallo: \n";
+		cout<<"2. Mostrar lista de gallos \n";
+		cout<<"3. Eliminar gallo \n";
+		cout<<"4. Modificar datos \n";
+		cout<<"5. Buscar gallo \n";
+		cout<<"6. Salir \n";
+		cout<<"Seleccione una opcion: ";
+		cin>>opc;
+
+		switch(opc)
+		{
+
+		    case 1:
+			{
+			    cout<<"Ingrese el nombre del gallo: ";
+			}
+		    break;
+		    case 2:
+				Gallod.mostrar();
+		    break;
+		    case 3:
+		    break;
+		    case 4:
+		    break;
+		    case 5:
+		    break;
+
+		    case 6:
+			cout<<"Fin del programa";
+			c+=1;
+		    break;
+		}
+
+		cout<<"\n+++++++++++++++ En 5 segundos se limpiara la pantalla +++++++++++++++";
+
+		Sleep(1000);
+		cout<<"\n+++++++++++++++ En 4 segundos se limpiara la pantalla +++++++++++++++";
+
+		Sleep(1000);
+		cout<<"\n+++++++++++++++ En 3 segundos se limpiara la pantalla +++++++++++++++";
+
+		Sleep(1000);
+		cout<<"\n+++++++++++++++ En 2 segundos se limpiara la pantalla +++++++++++++++";
+
+		Sleep(1000);
+		cout<<"\n+++++++++++++++ En 1 segundos se limpiara la pantalla +++++++++++++++";
+		cout<<"\n======================================================================";
+		Sleep(1000);
+		cout<<"\n continuar en el programa...? (1=si 2=no): \n";
+		cin>>c;
+		system("cls");
+
+	    }
+
+
+		return 1;
+
 }
