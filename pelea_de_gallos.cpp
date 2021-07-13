@@ -155,8 +155,79 @@ class Gallos{
 				return false;
 			}
 		}
-        
-		void modificar();
+		
+		
+		void modificar(string nombre){
+			if(!listavacia()){
+				
+				Nodo *p=Buscar(nombre);
+				cout<<"\n ¿Que datos desea modificar? (1.Nombre, 2.Altura, 3.Edad, 4.Peso, 5.Raza, 6.Victorias, 7.Derrotas): ";
+				int modify;
+				cin>>modify;
+				
+				switch(modify){
+					
+					case 1:{
+						cout<<"\n Ingrese el nuevo nombre: ";
+						string Nombre_nuevo;
+						cin>>Nombre_nuevo;
+						p->Datos.Nombre=Nombre_nuevo;
+						break;
+					}
+		    
+		    		case 2:{
+		    			cout<<"\n Ingrese la nueva altura: ";
+		    			float Altura_nueva;
+		    			cin>>Altura_nueva;
+		    			p->Datos.Altura=Altura_nueva;
+						break;
+					}
+
+		    		case 3:{
+		    			cout<<"\n Ingrese la nueva edad: ";
+		    			int Edad_nueva;
+		    			cin>>Edad_nueva;
+		    			p->Datos.Edad=Edad_nueva;
+						break;
+					}
+		    
+		    		case 4:{
+		    			cout<<"\n Ingrese el nuevo peso: ";
+		    			float peso_nuevo;
+		    			cin>>peso_nuevo;
+		    			p->Datos.Peso=peso_nuevo;
+						break;
+					}
+
+		    		case 5:{
+		    			cout<<"\n Ingrese la nueva raza: ";
+		    			string raza_nueva;
+		    			cin>>raza_nueva;
+		    			p->Datos.Raza=raza_nueva;
+						break;
+					}
+	    
+		   	 		case 6:{
+		   	 			cout<<"\n Ingrese las nuevas victorias: ";
+		   	 			int victorias_nueva;
+		   	 			cin>>victorias_nueva;
+		   	 			p->Datos.Victorias=victorias_nueva;
+							break;
+						}
+						
+					case 7:{
+						cout<<"\n Ingrese las nuevas derrotas: ";
+						int derrotas_nueva;
+						cin>>derrotas_nueva;
+						p->Datos.Derrotas=derrotas_nueva;
+						break;
+					}	
+
+							}
+							cout<<"\n Informacion cambiada correctamente ";		
+			}
+		}
+		
 		
         void cantidad(){
         	cout<<"\n Cantidad de gallos: "<<Cantidad;
@@ -176,7 +247,8 @@ int main(){
 		cout<<"3. Eliminar gallo \n";
 		cout<<"4. Modificar datos \n";
 		cout<<"5. Buscar gallo \n";
-		cout<<"6. Salir \n";
+		cout<<"6. Cantidad de gallos \n";
+		cout<<"7. Salir \n";
 		cout<<"Seleccione una opcion: ";
 		cin>>opc;
 
@@ -237,7 +309,13 @@ int main(){
 
 			}
 		    break;
-		    case 4:
+		    case 4:{
+		    	cout<<"\n Introduzca el nombre del gallo que desea modificar: ";
+		    	string New;
+		    	cin>>New;
+		    	Gallod.modificar(New);
+				break;
+			}
 		    break;
 		    case 5:{
 			
@@ -247,7 +325,13 @@ int main(){
 		    	Nodo *gallo=Gallod.Buscar(nombre);
 		    	cout<<"\nNombre del gallo: "<<gallo->Datos.Nombre<<"\n Altura: "<<gallo->Datos.Altura<<"\n Edad: "<<gallo->Datos.Edad<<"\n Peso: "<<gallo->Datos.Peso<<"\n Raza: "<<gallo->Datos.Raza<<"\n Victorias: "<<gallo->Datos.Victorias<<"\n Derrotas: "<<gallo->Datos.Derrotas;}
 		    break;
-		    case 6:
+		    
+		    case 6:{
+		    	Gallod.cantidad();
+				break;
+			}
+			
+		    case 7:
 			cout<<"Fin del programa";
 			c+=1;
 		    break;
