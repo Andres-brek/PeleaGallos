@@ -336,7 +336,8 @@ int main(){
 			c+=1;
 		    break;
 		}
-
+		cout<<"\n continuar en el programa...? (1=si 2=no): \n";
+		cin>>c;
 		cout<<"\n+++++++++++++++ En 5 segundos se limpiara la pantalla +++++++++++++++";
 
 		Sleep(1000);
@@ -352,8 +353,6 @@ int main(){
 		cout<<"\n+++++++++++++++ En 1 segundos se limpiara la pantalla +++++++++++++++";
 		cout<<"\n======================================================================";
 		Sleep(1000);
-		cout<<"\n continuar en el programa...? (1=si 2=no): \n";
-		cin>>c;
 		system("cls");
 
 	    }
